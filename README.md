@@ -11,3 +11,6 @@ Latest Version: `Pre-release v0.1`
   - Send friend requests.
   - Chat with your friends.
   - Invite your friends to your room regardless of ELO score.
+
+# Download
+Get the latest version from the [Releases](https://github.com/ByStronq/Caissa/releases) page
