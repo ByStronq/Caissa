@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{233D81D6-00E1-490A-977B-35EE196184E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Caïssa</RootNamespace>
+    <AssemblyName>Caïssa</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\SatrancTahtasiController.cs" />
+    <Compile Include="dortluSatranc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dortluSatranc.Designer.cs">
+      <DependentUpon>dortluSatranc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirisYap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisYap.Designer.cs">
+      <DependentUpon>GirisYap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KayitOl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KayitOl.Designer.cs">
+      <DependentUpon>KayitOl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="klasikSatranc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="klasikSatranc.Designer.cs">
+      <DependentUpon>klasikSatranc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="macBul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="macBul.Designer.cs">
+      <DependentUpon>macBul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mesaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mesaj.Designer.cs">
+      <DependentUpon>mesaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\bilgilerim.cs" />
+    <Compile Include="Models\EntityFramework\arkadasliklar.cs">
+      <DependentUpon>satrancModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityFramework\hamleler.cs">
+      <DependentUpon>satrancModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityFramework\kullanicilar.cs">
+      <DependentUpon>satrancModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityFramework\mesajlar.cs">
+      <DependentUpon>satrancModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityFramework\satrancModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>satrancModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityFramework\satrancModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>satrancModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityFramework\satrancModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>satrancModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityFramework\satrancTahtalari.cs">
+      <DependentUpon>satrancModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\satrancAlgoritmasi.cs" />
+    <Compile Include="profilim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profilim.Designer.cs">
+      <DependentUpon>profilim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="dortluSatranc.resx">
+      <DependentUpon>dortluSatranc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisYap.resx">
+      <DependentUpon>GirisYap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KayitOl.resx">
+      <DependentUpon>KayitOl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="klasikSatranc.resx">
+      <DependentUpon>klasikSatranc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="macBul.resx">
+      <DependentUpon>macBul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mesaj.resx">
+      <DependentUpon>mesaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profilim.resx">
+      <DependentUpon>profilim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Models\EntityFramework\satrancModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>satrancModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\EntityFramework\satrancModel.edmx.diagram">
+      <DependentUpon>satrancModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filigran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_avatar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_avatar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\at.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beyazAt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beyazFil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beyazKale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beyazPiyon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beyazSah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beyazVezir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piyon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vezir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\EntityFramework\satrancModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>satrancModel.Context.cs</LastGenOutput>
+      <DependentUpon>satrancModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\EntityFramework\satrancModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>satrancModel.edmx</DependentUpon>
+      <LastGenOutput>satrancModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\arkadasEkle.png" />
+    <None Include="Resources\yesilVezir.png" />
+    <None Include="Resources\yesilSah.png" />
+    <None Include="Resources\yesilPiyon.png" />
+    <None Include="Resources\yesilKale.png" />
+    <None Include="Resources\yesilFil.png" />
+    <None Include="Resources\turuncuVezir.png" />
+    <None Include="Resources\turuncuSah.png" />
+    <None Include="Resources\turuncuPiyon.png" />
+    <None Include="Resources\turuncuKale.png" />
+    <None Include="Resources\turuncuFil.png" />
+    <None Include="Resources\maviVezir.png" />
+    <None Include="Resources\maviSah.png" />
+    <None Include="Resources\maviPiyon.png" />
+    <None Include="Resources\maviKale.png" />
+    <None Include="Resources\maviFil.png" />
+    <None Include="Resources\kirmiziVezir.png" />
+    <None Include="Resources\kirmiziSah.png" />
+    <None Include="Resources\kirmiziPiyon.png" />
+    <None Include="Resources\kirmiziKale.png" />
+    <None Include="Resources\kirmiziFil.png" />
+    <None Include="Resources\yesilAt.png" />
+    <None Include="Resources\turuncuAt.png" />
+    <None Include="Resources\maviAt.png" />
+    <None Include="Resources\kirmiziAt.png" />
+    <None Include="Resources\im.png" />
+    <None Include="Resources\gm.png" />
+    <None Include="Resources\fm.png" />
+    <None Include="Resources\cm.png" />
+    <None Include="Resources\img_avatar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
