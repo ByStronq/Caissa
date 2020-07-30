@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ac424404678f435090675664bd6fb4d1" Name="Diagram1">
+        <EntityTypeShape EntityType="OnlineSatrancModel.arkadasliklar" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineSatrancModel.hamleler" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineSatrancModel.kullanicilar" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineSatrancModel.satrancTahtalari" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="OnlineSatrancModel.FK_arkadasliklar_alan" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineSatrancModel.FK_arkadasliklar_gonderen" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineSatrancModel.FK_hamleler_satrancTahtalari" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineSatrancModel.FK_satrancTahtalari_odaSahibi" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineSatrancModel.FK_satrancTahtalari_rakip" ManuallyRouted="false" />
+        <AssociationConnector Association="OnlineSatrancModel.FK_satrancTahtalari_rakip2" />
+        <AssociationConnector Association="OnlineSatrancModel.FK_satrancTahtalari_rakip3" />
+        <EntityTypeShape EntityType="OnlineSatrancModel.mesajlar" Width="1.5" PointX="3" PointY="7.875" />
+        <AssociationConnector Association="OnlineSatrancModel.FK_mesajlar_alan" />
+        <AssociationConnector Association="OnlineSatrancModel.FK_mesajlar_gonderen" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
