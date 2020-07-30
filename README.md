@@ -3,7 +3,7 @@ Caïssa is a four-player 2D online chess game and inspired by the goddess of che
 
 Latest Version: v0.1
 
-# Features
+###### Features
   - Create own profile and info.
   - Create double or quadruple match rooms.
   - Match the opponents according to your ELO score.
